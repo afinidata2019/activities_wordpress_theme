@@ -1,4 +1,5 @@
 /* GENERAL */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i,700&display=swap');
 
 * {
     margin: 0;
@@ -14,7 +15,8 @@ body {
     min-height: 100vh;
     flex-direction: column;
     justify-content: flex-start;
-    font-family: Arial;
+    font-family: 'Montserrat', sans-serif;
+    background: #FAFAFA;
 }
 
 body.customize-support {
@@ -59,10 +61,46 @@ body.customize-support {
     margin-bottom: .5em;
 }
 
+.single-content h1 {
+    color: #00B2EB;
+}
+
+.single-content ul {
+    padding-left: 2em;
+    list-style-type: none;
+}
+
+.single-content ul li {
+    margin-bottom: 1em;
+    position: relative;
+}
+
+.single-content ul li::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background: #00B2EB;
+    border-radius: 8px;
+    display: block;
+    position: absolute;
+    top: 6px;
+    left: -16px;
+}
+
+.single-content .blocks-gallery-grid {
+    padding-left: 0;
+}
+
+.single-content .blocks-gallery-grid li::before {
+    display: none;
+}
+
 /* FOOTER */
 
 .main-footer {
     padding: 2em 0;
+    background: #fff;
+    margin-top: auto;
 }
 
 .main-footer .container {
