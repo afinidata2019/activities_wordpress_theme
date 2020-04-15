@@ -27,9 +27,9 @@ function create_taxonomy_faq_type() {
 		'items_list_navigation'      => __( 'Tipo FAQ','activities' ),
 	);
 	$rewrite = array(
-		'slug'                       => 'faq_type',
+		'slug'                       => 'faqtype',
 		'with_front'                 => true,
-		'hierarchical'               => false,
+		'hierarchical'               => true,
 	);
 	$args = array(
 		'labels'                     => $labels,
@@ -42,7 +42,7 @@ function create_taxonomy_faq_type() {
 		'rewrite'                    => $rewrite,
 		'show_in_rest'               => true
 	);
-	register_taxonomy( 'faq_type', array( 'faq' ), $args );
+	register_taxonomy( 'faqtype', array( 'faq' ), $args );
 
 }
 add_action( 'init', 'create_taxonomy_faq_type', 0 );
