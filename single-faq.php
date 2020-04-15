@@ -4,6 +4,7 @@
 	        <?php the_post_thumbnail(); ?>
         </div>
         <div class="container">
+            <h2><?php the_title(); ?></h2>
             <div class="single-box">
                 <?php
                 if(have_posts()) {
