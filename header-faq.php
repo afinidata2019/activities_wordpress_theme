@@ -10,9 +10,11 @@
 	<?php wp_head(); ?>
 </head>
 <body>
-<header class="fa-header">
+<header class="faq-header">
 	<div class="container">
-		asdfasdf
+		<div class="faq-header-content">
+			<?php the_custom_logo(); ?>
+		</div>
 	</div>
 </header>
 <main>
