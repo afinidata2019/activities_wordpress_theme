@@ -8,3 +8,6 @@ require_once ('config/supports.php');
 
 //post types
 require_once( 'config/post_types.php' );
+
+//taxonomies
+require_once ('config/taxonomies.php');
