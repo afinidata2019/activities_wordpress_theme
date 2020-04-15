@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php get_header('faq'); ?>
 	<section class="single-content">
         <div class="post-thumbnail-content">
 	        <?php the_post_thumbnail(); ?>
