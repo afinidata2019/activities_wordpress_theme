@@ -55,7 +55,7 @@ body.customize-support {
 
 .faq-banner {
     padding: 10em 2em;
-    background: #bebebe;
+    background: #634794;
     display: flex;
     justify-content: center;
     width: 100%;
@@ -67,7 +67,9 @@ body.customize-support {
     background: #ffffff;
     width: 100%;
     max-width: 700px;
-    box-shadow: 0 0 1px 1px rgba(0,0,0, .1);
+    box-shadow: 0 0 1px 1px rgba(0,0,0, .1), 2px 2px 3px 2px rgba(0,0,0, .2);
+    overflow: hidden;
+    border-radius: .5em;
 }
 
 .faq-banner input,
@@ -76,6 +78,7 @@ body.customize-support {
     background: none !important;
     padding: 1em;
     font-size: 1em;
+    color: rgba(0,0,0, .6);
 }
 
 .faq-banner input {
@@ -85,6 +88,7 @@ body.customize-support {
 
 .faq-banner button {
     padding: 1em 0 1em 1em;
+    color: rgba(0,0,0, .3);
 }
 
 .faq-content {
@@ -344,6 +348,16 @@ body.customize-support {
 
 .main-footer .social li {
     margin-left: .5em;
+}
+
+/* SEARCH */
+
+.search-results {
+    background: #fff;
+}
+
+.search-results h2 {
+    padding: 2em 0;
 }
 
 /* RESPONSIVE */
