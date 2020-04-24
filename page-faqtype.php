@@ -14,6 +14,7 @@ $terms = get_terms( array(
 </div>
 
 <div class="faq-banner">
+    <img src="<?php echo get_template_directory_uri()?>/assets/images/background-faq.jpg" class="faq-banner-background">
 	<?php get_search_form(); ?>
 </div>
 

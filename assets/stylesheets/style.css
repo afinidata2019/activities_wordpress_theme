@@ -59,6 +59,18 @@ body.customize-support {
     display: flex;
     justify-content: center;
     width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.faq-banner-background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    position: absolute;
+    top: 0;
+    z-index: 1;
 }
 
 .faq-banner form {
@@ -70,6 +82,7 @@ body.customize-support {
     box-shadow: 0 0 1px 1px rgba(0,0,0, .1), 2px 2px 3px 2px rgba(0,0,0, .2);
     overflow: hidden;
     border-radius: .5em;
+    z-index: 2;
 }
 
 .faq-banner input,
@@ -117,6 +130,7 @@ body.customize-support {
     margin-bottom: 2em;
 }
 
+
 .text-left h2 {
     text-align: left;
 }
@@ -140,6 +154,28 @@ body.customize-support {
     max-width: 700px;
     margin: 0 auto;
     list-style-type: none;
+}
+
+.navigation {
+    max-width: 700px;
+    padding: 2em 0;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.navigation a {
+    display: inline-block;
+    text-decoration: none;
+    color: #818286;
+    padding: 1em 1.5em;
+    border: 1px solid #634794;
+    border-radius: 5px;
+    transition: all .2s;
+}
+
+.navigation a:hover {
+    background: #634794;
+    color: #fff;
 }
 
 .faqtype-list-content li a {
