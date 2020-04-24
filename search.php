@@ -1,5 +1,6 @@
 <?php get_header('faq'); ?>
 	<div class="faq-banner">
+        <img src="<?php echo get_template_directory_uri()?>/assets/images/background-faq.jpg" class="faq-banner-background">
 		<?php get_search_form(); ?>
 	</div>
 	<div class="search-results">
@@ -13,6 +14,9 @@
 						<?php endwhile; ?>
 					</ul>
 				<?php endif; ?>
+                <div class="navigation page-navigation">
+                    <p><?php posts_nav_link(); ?></p>
+                </div>
 			</div>
 		</div>
 	</div>
