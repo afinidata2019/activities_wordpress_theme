@@ -9,12 +9,27 @@ $terms = get_terms( array(
 ) );
 ?>
 
+<div class="page-title">
+    <h2>Preguntas Frecuentes</h2>
+</div>
+
+<div class="faq-banner">
+	<?php get_search_form(); ?>
+</div>
+
 <div class="container">
-	<ul>
-		<?php foreach ($terms as $term) { ?>
-			<li><a href="<?php echo get_term_link($term->term_id); ?>"><?php echo $term->name; ?></a></li>
-		<?php } ?>
-	</ul>
+    <div class="faq-content">
+        <?php if (have_posts()): while (have_posts()): the_post();
+            the_content();
+        endwhile; endif; ?>
+    </div>
+    <div class="faq-list">
+        <ul>
+            <?php foreach ($terms as $term) { ?>
+                <li><a href="<?php echo get_term_link($term->term_id); ?>"><?php echo $term->name; ?></a></li>
+            <?php } ?>
+        </ul>
+    </div>
 </div>
 
 <?php get_footer(); ?>
