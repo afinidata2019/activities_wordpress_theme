@@ -396,6 +396,11 @@ body.customize-support {
     padding: 2em 0;
 }
 
+.disclaimer {
+    text-align: center;
+    padding-bottom: 2em;
+}
+
 /* RESPONSIVE */
 
 @media (max-width: 768px) {
