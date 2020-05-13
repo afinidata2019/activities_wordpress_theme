@@ -26,13 +26,13 @@ get_header();
                 <?php if($lang == 'en') { ?>
                     <a target="popup"
                        class="facebook-button"
-                       href="http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>&t=hola"
+                       href="http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>?shared=true&t=hola"
                        onclick="window.open('http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>?shared=true&t=hola','popup','width=600,height=600')";
                     >Share on Facebook</a>
                 <?php } else { ?>
                     <a target="popup"
                        class="facebook-button"
-                       href="http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>&t=hola"
+                       href="http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>?shared=true&t=hola"
                        onclick="window.open('http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>?shared=true&t=hola','popup','width=600,height=600')";
                     >Comparte en Facebook</a>
                 <?php } ?>
