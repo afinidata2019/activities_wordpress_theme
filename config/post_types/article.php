@@ -27,7 +27,7 @@
 	'hierarchical'       => false,
 	'menu_position'      => null,
 	'show_in_rest'       => true,
-	'supports'           => array( 'title', 'editor', 'thumbnail' )
+	'supports'           => array( 'title', 'editor', 'thumbnail', 'excerpt' )
 	);
 
 	register_post_type( 'article', $args );
