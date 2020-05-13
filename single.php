@@ -7,30 +7,6 @@ get_header();
     $lang = substr(explode(',',$_SERVER['HTTP_ACCEPT_LANGUAGE'])[0], 0, 2);
 ?>
 	<section class="single-content">
-        <?php if($shared == 'true') { ?>
-            <div class="container">
-                <div class="disclaimer">
-                    <span>
-                        <?php
-                            if($lang == 'en') {
-                                echo 'This activity may not be suitable for your baby, if you want personalized activities subscribe ';
-                            } else {
-                                echo 'Esta actividad podría no ser adecuada para tu bebé, si quieres actividades personalizadas suscríbete ';
-                            }
-                        ?>
-                    </span>
-                    <a href="https://m.me/afinidata?ref=shared_activity">
-	                    <?php
-	                    if($lang == 'en') {
-		                    echo 'here.';
-	                    } else {
-		                    echo 'aquí.';
-	                    }
-	                    ?>
-                    </a>
-                </div>
-            </div>
-        <?php } ?>
         <div class="post-thumbnail-content">
 	        <?php the_post_thumbnail(); ?>
         </div>
@@ -47,11 +23,45 @@ get_header();
         </div>
         <div class="container">
             <div class="share-buttons">
-                <a target="popup"
-                   href="http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>&t=hola"
-                   onclick="window.open('http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>&t=hola','popup','width=600,height=600')";
-                >share</a>
+                <?php if($lang == 'en') { ?>
+                    <a target="popup"
+                       class="facebook-button"
+                       href="http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>&t=hola"
+                       onclick="window.open('http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>?shared=true&t=hola','popup','width=600,height=600')";
+                    >Share on Facebook</a>
+                <?php } else { ?>
+                    <a target="popup"
+                       class="facebook-button"
+                       href="http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>&t=hola"
+                       onclick="window.open('http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>?shared=true&t=hola','popup','width=600,height=600')";
+                    >Comparte en Facebook</a>
+                <?php } ?>
             </div>
         </div>
 	</section>
+
+<?php if($shared == 'true') { ?>
+    <div class="disclaimer">
+        <div class="disclaimer-content">
+            <button class="disclaimer-close">
+                <img src="<?php bloginfo('template_url');?>/assets/images/button.png" class="close" alt="">
+            </button>
+            <img src="<?php bloginfo('template_url');?>/assets/images/shared.jpg" alt="">
+            <div class="text-disclaimer">
+                <?php if($lang == 'en') { ?>
+                    <h1>+500 activities</h1>
+                    <h2>especified for your child</h2>
+                    <span>Get started now </span><strong>FREE</strong><br>
+                    <a href="https://m.me/afinidata?ref=shared_activity">Click Here</a>
+                <?php } else { ?>
+                    <h1>+500 actividades</h1>
+                    <h2>específicas para tu peque</h2>
+                    <span>Comienza ahora totalmente </span><strong>GRATIS</strong><br>
+                    <a href="https://m.me/afinidata?ref=shared_activity">Click Aquí</a>
+                <?php } ?>
+                    
+            </div>
+        </div>
+    </div>
+<?php } ?>
 <?php get_footer(); ?>
