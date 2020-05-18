@@ -10,6 +10,23 @@ get_header();
         <div class="post-thumbnail-content">
 	        <?php the_post_thumbnail(); ?>
         </div>
+        <div class="share-buttons right">
+            <div class="container">
+	            <?php if($lang == 'en') { ?>
+                  <a target="popup"
+                     class="facebook-button"
+                     href="http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>?shared=true&t=hola"
+                     onclick="window.open('http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>?shared=true&t=hola','popup','width=600,height=600')";
+                  >Share on Facebook</a>
+	            <?php } else { ?>
+                  <a target="popup"
+                     class="facebook-button"
+                     href="http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>?shared=true&t=hola"
+                     onclick="window.open('http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>?shared=true&t=hola','popup','width=600,height=600')";
+                  >Comparte en Facebook</a>
+	            <?php } ?>
+            </div>
+        </div>
         <div class="container">
             <div class="single-box">
                 <?php
