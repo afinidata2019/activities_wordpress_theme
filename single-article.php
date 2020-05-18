@@ -29,19 +29,21 @@ $lang = substr(explode(',',$_SERVER['HTTP_ACCEPT_LANGUAGE'])[0], 0, 2);
 			</div>
 		</div>
 		<?php if($licence != 'premium' && $licence != 'patrocinado' && $licence != 'trial_premium') { ?>
-			<div class="container" style="text-align: center; margin-top: 2em;">
-				<?php if($lang == 'en') {
-					echo '<span>By being a premium member, you get access to this and more items, compra tu paquete </span>';
-				} else {
-					echo '<span>Al ser parte de premium, obtienes acceso a este y más artículos, get the complete access </span>';
-				}
-				?>
-				<?php if($lang == 'en') {
-					echo '<a href="https://afini.org/reservarkits">here.</a>';
-				} else {
-					echo '<a href="https://afini.org/reservarkits">aquí.</a>';
-				}
-				?>
+			<div class="locked">
+                <div class="container">
+                    <?php if($lang == 'en') {
+                        echo '<strong>¡Continue reading!</strong><span>Switch to <b>Afini Premium</b> today.</span>';
+                    } else {
+                        echo '<strong>¡Continua leyendo!</strong><span>Cámbiate a <b>Afini Premium</b> hoy.</span>';
+                    }
+                    ?>
+                    <?php if($lang == 'en') {
+                        echo '<a href="https://afini.org/reservarkits">Click Here</a>';
+                    } else {
+                        echo '<a href="https://afini.org/reservarkits">Click Aquí</a>';
+                    }
+                    ?>
+                </div>
 			</div>
 		<?php }?>
 		<!--
