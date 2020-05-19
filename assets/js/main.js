@@ -8,12 +8,26 @@
         })
     }
 
-    window.addEventListener('load', () => {
+    const limitMain = main => {
+        main.addEventListener('contextmenu', e => {
+            e.preventDefault()
+        })
+    }
+
+    w.addEventListener('load', () => {
         const POST_DISCLAIMER = d.querySelector('.disclaimer')
         const POST_CLOSE = d.querySelector('.disclaimer-close')
+
+        const MAIN = d.querySelector('main')
 
         if (POST_DISCLAIMER && POST_CLOSE) {
             closeDisclaimer(POST_CLOSE, POST_DISCLAIMER)
         }
+
+        if(MAIN) {
+            limitMain(MAIN)
+        }
     })
+
+
 })(document, window, console)
