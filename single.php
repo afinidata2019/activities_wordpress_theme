@@ -18,6 +18,12 @@ get_header();
                      href="http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>?shared=true&t=hola"
                      onclick="window.open('http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>?shared=true&t=hola','popup','width=600,height=600')";
                   >Share on Facebook</a>
+	            <?php } else if ($lang == 'ar') { ?>
+                  <a target="popup"
+                     class="facebook-button"
+                     href="http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>?shared=true&t=hola"
+                     onclick="window.open('http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>?shared=true&t=hola','popup','width=600,height=600')";
+                  >حصة على الفيسبوك</a>
 	            <?php } else { ?>
                   <a target="popup"
                      class="facebook-button"
@@ -36,6 +42,7 @@ get_header();
                         the_content();
                     }
                 }?>
+                <div class="limitator"></div>
             </div>
         </div>
         <div class="container">
@@ -46,6 +53,12 @@ get_header();
                        href="http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>?shared=true&t=hola"
                        onclick="window.open('http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>?shared=true&t=hola','popup','width=600,height=600')";
                     >Share on Facebook</a>
+                <?php } else if ($lang == 'ar') { ?>
+                    <a target="popup"
+                       class="facebook-button"
+                       href="http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>?shared=true&t=hola"
+                       onclick="window.open('http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>?shared=true&t=hola','popup','width=600,height=600')";
+                    >حصة على الفيسبوك</a>
                 <?php } else { ?>
                     <a target="popup"
                        class="facebook-button"
@@ -65,7 +78,7 @@ get_header();
             </button>
             <img src="<?php bloginfo('template_url');?>/assets/images/shared.jpg" alt="">
             <div class="text-disclaimer">
-                <?php if($lang == 'en') { ?>
+                <?php if($lang == 'en' || $lang == 'ar') { ?>
                     <h1>+500 activities</h1>
                     <h2>especified for your child</h2>
                     <span>Get started now </span><strong>FREE</strong><br>
