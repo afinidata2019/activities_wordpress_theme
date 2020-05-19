@@ -31,7 +31,7 @@ $lang = substr(explode(',',$_SERVER['HTTP_ACCEPT_LANGUAGE'])[0], 0, 2);
 		<?php if($licence != 'premium' && $licence != 'patrocinado' && $licence != 'trial_premium') { ?>
 			<div class="locked">
                 <div class="container">
-                    <?php if($lang == 'en') {
+                    <?php if($lang == 'en' || $lang == 'ar') {
                         echo '<strong>¡Continue reading!</strong><span>Switch to <b>Afini Premium</b> today.</span>';
                     } else {
                         echo '<strong>¡Continua leyendo!</strong><span>Cámbiate a <b>Afini Premium</b> hoy.</span>';
