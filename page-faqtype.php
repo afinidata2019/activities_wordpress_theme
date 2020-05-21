@@ -10,7 +10,7 @@ $terms = get_terms( array(
 ?>
 
 <div class="page-title">
-    <h2>Preguntas Frecuentes</h2>
+    <h2><?php the_title(); ?></h2>
 </div>
 
 <div class="faq-banner">
