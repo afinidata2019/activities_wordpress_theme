@@ -11,3 +11,6 @@ require_once( 'config/post_types.php' );
 
 //taxonomies
 require_once ('config/taxonomies.php');
+
+//thumbs size
+require_once ('config/images_size.php');
