@@ -108,6 +108,10 @@ body.customize-support {
     padding: 2em 0;
 }
 
+.faq-single-content p {
+    margin-bottom: 1em;
+}
+
 .faq-list ul {
     list-style-type: none;
     display: flex;
