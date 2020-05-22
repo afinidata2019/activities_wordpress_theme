@@ -2,7 +2,7 @@
 
 	<section class="faq-single-content">
         <div class="post-thumbnail-content">
-	        <?php the_post_thumbnail(); ?>
+	        <?php the_post_thumbnail('faq-size'); ?>
         </div>
         <div class="container">
         <h2><?php the_title(); ?></h2>
