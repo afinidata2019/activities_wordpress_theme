@@ -501,12 +501,12 @@ body.customize-support {
 
 .disclaimer-content .text-disclaimer h1 {
     color: #634792;
-    font-size: 2.5em;
+    font-size: 2.4em;
 }
 
 .disclaimer-content .text-disclaimer h2 {
     color: #F3AA18;
-    font-size: 2em;
+    font-size: 1.9em;
 }
 
 .disclaimer-content .text-disclaimer span,
@@ -599,4 +599,14 @@ body.customize-support {
     text-decoration: none;
     padding: .2em 1em;
     border-radius: 2em;
+}
+
+.header-banner a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    padding: 1em;
+    text-align: center;
+    background: #f3aa19;
 }
