@@ -245,4 +245,28 @@ get_header();
         </div>
     </div>
 <?php } ?>
+
+<?php if(!$license) { ?>
+  <div class="container small-container">
+      <div class="single-box">
+          <h2>Suscríbete para recibir actividades para tu bebé.</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, inventore.</p>
+          <form action="." method="post" data-default-uri="http://localhost:8000">
+              <div class="form-control"><label for="">Nombre: </label>
+                  <input type="text">
+              </div>
+              <div class="form-control"><label for="">Apellido: </label>
+                  <input type="text">
+              </div>
+              <div class="form-control"><label for="">Nombre o sobrenombre de tu bebé: </label>
+                  <input type="text">
+              </div>
+              <div class="form-control"><label for="">Fecha de nacimiento: </label>
+                  <input type="text">
+              </div>
+              <input type="submit" value="Suscribirme">
+          </form>
+      </div>
+  </div>
+<?php } ?>
 <?php get_footer(); ?>

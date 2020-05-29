@@ -368,6 +368,14 @@ body.customize-support {
     left: 0;
 }
 
+.small-container  {
+    margin-bottom: 2em;
+}
+
+.small-container h2 {
+    color: #634794;
+}
+
 /* FOOTER */
 
 .main-footer {
@@ -446,6 +454,10 @@ body.customize-support {
         width: 992px;
     }
 
+    .small-container {
+        width: 800px;
+    }
+
     .single-content .post-thumbnail-content {
         width: 1000px;
     }
@@ -454,6 +466,10 @@ body.customize-support {
 @media (min-width: 1251px) {
     .container {
         width: 1200px;
+    }
+
+    .small-container {
+        width: 900px;
     }
 
     .single-content .post-thumbnail-content {
