@@ -236,9 +236,8 @@ get_header();
                     <span> Endi to'liq boshlang </span> <strong> BEPUL </strong> <br>
                     <a href="https://m.me/afinidata?ref=shared_activity"> Bu yerni bosing </a>
 	            <?php } else { ?>
-                    <h1>+500 activities</h1>
-                    <h2>especified for your child</h2>
-                    <span>Get started now </span><strong>FREE</strong><br>
+                    <h1>+500 personalized</h1>
+                    <h2>activities for your child</h2>
                     <a href="https://m.me/afinidata?ref=shared_activity">Click Here</a>
 	            <?php } ?>
             </div>
