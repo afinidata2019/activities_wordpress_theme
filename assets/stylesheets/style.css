@@ -626,3 +626,7 @@ body.customize-support {
     text-align: center;
     background: #f3aa19;
 }
+
+.child-details {
+    display: none;
+}

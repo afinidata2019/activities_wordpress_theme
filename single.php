@@ -251,18 +251,28 @@ get_header();
       <div class="single-box">
           <h2>Suscríbete para recibir actividades para tu bebé.</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, inventore.</p>
-          <form action="." method="post" data-default-uri="http://localhost:8000">
+          <form action="." method="post" data-default-uri="http://127.0.0.1:8000" id="suscribe-form"
+                data-language="<?php echo $lang; ?>">
               <div class="form-control"><label for="">Nombre: </label>
-                  <input type="text">
+                  <input type="text" name="first_name" required>
               </div>
               <div class="form-control"><label for="">Apellido: </label>
-                  <input type="text">
+                  <input type="text" name="last_name" required>
               </div>
-              <div class="form-control"><label for="">Nombre o sobrenombre de tu bebé: </label>
-                  <input type="text">
+              <div class="form-control">
+                  <label for="">Tu peque ya nació?</label>
+                  <select name="has_child" id="" required>
+                      <option value="no" selected>No</option>
+                      <option value="yes">Si</option>
+                  </select>
               </div>
-              <div class="form-control"><label for="">Fecha de nacimiento: </label>
-                  <input type="text">
+              <div class="child-details">
+                  <div class="form-control"><label for="">Nombre o sobrenombre de tu bebé: </label>
+                      <input type="text" name="child_name">
+                  </div>
+                  <div class="form-control"><label for="">Fecha de nacimiento: </label>
+                      <input type="text" class="datepicker-input" name="birthday">
+                  </div>
               </div>
               <input type="submit" value="Suscribirme">
           </form>
