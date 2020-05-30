@@ -38,9 +38,9 @@ $lang = substr(explode(',',$_SERVER['HTTP_ACCEPT_LANGUAGE'])[0], 0, 2);
                     }
                     ?>
                     <?php if($lang == 'en') {
-                        echo '<a href="https://afini.org/reservarkits">Click Here</a>';
+                        echo '<a href="https://afini.org/reservarkits/membresiaafinimensual-blts6">Click Here</a>';
                     } else {
-                        echo '<a href="https://afini.org/reservarkits">Click Aquí</a>';
+                        echo '<a href="https://afini.org/reservarkits/membresiaafinimensual-blts6">Click Aquí</a>';
                     }
                     ?>
                 </div>
