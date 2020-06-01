@@ -28,50 +28,52 @@ get_header();
     # Ukrainian = uk_UA
     # Uzbek = uz_UZ
 ?>
-    <?php if(!$license) { ?>
-        <div class="header-banner">
-            <a href="https://m.me/afinidata?ref=shared_banner">
-	            <?php if($lang == 'es') { ?>
-                  Suscríbete para recibir +500 actividades específicas para tu peque. Click aquí.
-	            <?php  } elseif($lang == 'hy') { ?>
-                  Բաժանորդագրվեք ՝ ձեր փոքրիկի համար ստանալու համար +500 հատուկ գործողություններ: Սեղմեք այստեղ.
-	            <?php  } elseif($lang == 'az') { ?>
-                  Kiçik biriniz üçün +500 xüsusi fəaliyyət almaq üçün abunə olun. buraya basın
-	            <?php  } elseif($lang == 'be') { ?>
-                  Падпішыцеся, каб атрымаць +500 канкрэтных мерапрыемстваў для вашага маленькага. Клікніце тут.
-	            <?php  } elseif($lang == 'bs') { ?>
-                  Pretplatite se na primanje +500 određenih aktivnosti za vašu malu. Kliknite ovdje.
-	            <?php  } elseif($lang == 'bg') { ?>
-                  Абонирайте се да получавате +500 специфични дейности за вашето бебе. Кликнете тук.
-	            <?php  } elseif($lang == 'hr') { ?>
-                  Pretplatite se na primanje +500 specifičnih aktivnosti za vašu malu. Kliknite ovdje.
-	            <?php  } elseif($lang == 'ka') { ?>
-                  გამოიწერეთ, რომ მიიღოთ +500 სპეციფიკური ღონისძიებები თქვენი პატარისათვის. Დააკლიკე აქ.
-	            <?php  } elseif($lang == 'kk') { ?>
-                  Кішкентайыңыз үшін +500 нақты іс-шараларға жазылу үшін жазылыңыз. Мында басыңыз.
-	            <?php  } elseif($lang == 'ky') { ?>
-                  Кичинекейиңиз үчүн +500 конкреттүү иш-аракеттерди алуу үчүн жазылыңыз. Бул жерди бас.
-	            <?php  } elseif($lang == 'mk') { ?>
-                  Зачленете се за да добиете +500 специфични активности за вашето малечко. Кликни тука.
-	            <?php  } elseif($lang == 'ro') { ?>
-                  Aboneaza-te pentru a primi +500 de activitati specifice pentru cel mic. Click aici.
-	            <?php  } elseif($lang == 'sr') { ?>
-                  Pretplatite se da primate +500 specifične aktivnosti za vašu malu. Kliknite ovde.
-	            <?php  } elseif($lang == 'tg') { ?>
-                  Барои гирифтани +500 фаъолиятҳои мушаххас барои кӯдаки худ обуна шавед. Ин ҷоро ангушт зан.
-	            <?php  } elseif($lang == 'tr') { ?>
-                  Ufaklığınız için +500 özel etkinlik almak için abone olun. Buraya tıklayın.
-	            <?php  } elseif($lang == 'tk') { ?>
-                  Kiçijikiňiz üçin +500 aýratyn çäreleri almak üçin ýazylyň. Şu ýere basyň.
-	            <?php  } elseif($lang == 'uk') { ?>
-                  Підпишіться на отримання +500 конкретних заходів для вашого малюка. Натисніть тут.
-	            <?php  } elseif($lang == 'uz') { ?>
-                  Kichkintoyingiz uchun +500 maxsus tadbirlarni olish uchun obuna bo'ling. Bu yerni bosing.
-	            <?php } else { ?>
-                  Subscribe to access to +500 personalized activities for your child. Click Here.
-	            <?php } ?>
-            </a>
-        </div>
+    <?php if(!is_user_logged_in()) {?>
+        <?php if(!$license) { ?>
+            <div class="header-banner">
+                <a href="https://m.me/afinidata?ref=shared_banner">
+                    <?php if($lang == 'es') { ?>
+                        Suscríbete para recibir +500 actividades específicas para tu peque. Click aquí.
+                    <?php  } elseif($lang == 'hy') { ?>
+                        Բաժանորդագրվեք ՝ ձեր փոքրիկի համար ստանալու համար +500 հատուկ գործողություններ: Սեղմեք այստեղ.
+                    <?php  } elseif($lang == 'az') { ?>
+                        Kiçik biriniz üçün +500 xüsusi fəaliyyət almaq üçün abunə olun. buraya basın
+                    <?php  } elseif($lang == 'be') { ?>
+                        Падпішыцеся, каб атрымаць +500 канкрэтных мерапрыемстваў для вашага маленькага. Клікніце тут.
+                    <?php  } elseif($lang == 'bs') { ?>
+                        Pretplatite se na primanje +500 određenih aktivnosti za vašu malu. Kliknite ovdje.
+                    <?php  } elseif($lang == 'bg') { ?>
+                        Абонирайте се да получавате +500 специфични дейности за вашето бебе. Кликнете тук.
+                    <?php  } elseif($lang == 'hr') { ?>
+                        Pretplatite se na primanje +500 specifičnih aktivnosti za vašu malu. Kliknite ovdje.
+                    <?php  } elseif($lang == 'ka') { ?>
+                        გამოიწერეთ, რომ მიიღოთ +500 სპეციფიკური ღონისძიებები თქვენი პატარისათვის. Დააკლიკე აქ.
+                    <?php  } elseif($lang == 'kk') { ?>
+                        Кішкентайыңыз үшін +500 нақты іс-шараларға жазылу үшін жазылыңыз. Мында басыңыз.
+                    <?php  } elseif($lang == 'ky') { ?>
+                        Кичинекейиңиз үчүн +500 конкреттүү иш-аракеттерди алуу үчүн жазылыңыз. Бул жерди бас.
+                    <?php  } elseif($lang == 'mk') { ?>
+                        Зачленете се за да добиете +500 специфични активности за вашето малечко. Кликни тука.
+                    <?php  } elseif($lang == 'ro') { ?>
+                        Aboneaza-te pentru a primi +500 de activitati specifice pentru cel mic. Click aici.
+                    <?php  } elseif($lang == 'sr') { ?>
+                        Pretplatite se da primate +500 specifične aktivnosti za vašu malu. Kliknite ovde.
+                    <?php  } elseif($lang == 'tg') { ?>
+                        Барои гирифтани +500 фаъолиятҳои мушаххас барои кӯдаки худ обуна шавед. Ин ҷоро ангушт зан.
+                    <?php  } elseif($lang == 'tr') { ?>
+                        Ufaklığınız için +500 özel etkinlik almak için abone olun. Buraya tıklayın.
+                    <?php  } elseif($lang == 'tk') { ?>
+                        Kiçijikiňiz üçin +500 aýratyn çäreleri almak üçin ýazylyň. Şu ýere basyň.
+                    <?php  } elseif($lang == 'uk') { ?>
+                        Підпишіться на отримання +500 конкретних заходів для вашого малюка. Натисніть тут.
+                    <?php  } elseif($lang == 'uz') { ?>
+                        Kichkintoyingiz uchun +500 maxsus tadbirlarni olish uchun obuna bo'ling. Bu yerni bosing.
+                    <?php } else { ?>
+                        Subscribe to access to +500 personalized activities for your child. Click Here.
+                    <?php } ?>
+                </a>
+            </div>
+        <?php } ?>
     <?php } ?>
 	<section class="single-content">
         <div class="post-thumbnail-content">
@@ -109,7 +111,9 @@ get_header();
                         the_content();
                     }
                 }?>
-                <div class="limitator"></div>
+                <?php if(!is_user_logged_in()) { ?>
+                    <div class="limitator"></div>
+                <?php } ?>
             </div>
         </div>
         <div class="container">
@@ -137,111 +141,113 @@ get_header();
         </div>
 	</section>
 
-<?php if(!$license) { ?>
-    <div class="disclaimer">
-        <div class="disclaimer-content">
-            <button class="disclaimer-close">
-                <img src="<?php bloginfo('template_url');?>/assets/images/button.png" class="close" alt="">
-            </button>
-            <img src="<?php bloginfo('template_url');?>/assets/images/shared.jpg" alt="">
-            <div class="text-disclaimer">
-	            <?php if($lang == 'es') { ?>
-                    <h1>+500 actividades</h1>
-                    <h2>específicas para tu peque</h2>
-                    <span>Comienza ahora totalmente </span><strong>GRATIS</strong><br>
-                    <a href="https://m.me/afinidata?ref=shared_activity">Click Aquí</a>
-	            <?php  } elseif($lang == 'hy') { ?>
-                    <h1> +500 գործողություններ </h1>
-                    <h2> հատուկ ձեր փոքրիկի համար </h2>
-                    <span> Սկսեք այժմ ամբողջությամբ </span> <strong> ԱՆՎԱՐ </ strong> <br> <br>
-                    <a href="https://m.me/afinidata?ref=shared_activity"> Սեղմեք այստեղ </a>
-	            <?php  } elseif($lang == 'az') { ?>
-                    <h1>+500 fəaliyyət</h1>
-                    <h2>kiçik bir xüsusi</h2>
-                    <span>İndi tam başlayın</span><strong>PULSUZ</strong><br>
-                    <a href="https://m.me/afinidata?ref=shared_activity">Bura basın</a>
-	            <?php  } elseif($lang == 'be') { ?>
-                    <h1> +500 мерапрыемстваў </h1>
-                    <h2> канкрэтна для вашага маленькага </h2>
-                    <span> Пачніце цалкам </span> <strong> БЯСПЛАТНА </strong> <br>
-                    <a href="https://m.me/afinidata?ref=shared_activity"> Націсніце тут </a>
-	            <?php  } elseif($lang == 'bs') { ?>
-                    <h1> +500 aktivnosti </h1>
-                    <h2> specifično za vašeg mališana </h2>
-                    <span> Počnite sada u potpunosti </span> <strong> BESPLATNO </strong> <br>
-                    <a href="https://m.me/afinidata?ref=shared_activity"> Kliknite ovde </a>
-	            <?php  } elseif($lang == 'bg') { ?>
-                    <h1> +500 дейности </h1>
-                    <h2> специфичен за вашия малък </h2>
-                    <span> Започнете сега напълно </span> <strong> БЕЗПЛАТНО </strong> <br>
-                    <a href="https://m.me/afinidata?ref=shared_activity"> Кликнете тук </a>
-	            <?php  } elseif($lang == 'hr') { ?>
-                    <h1> +500 aktivnosti </h1>
-                    <h2> specifično za vašeg mališana </h2>
-                    <span> Počnite sada u potpunosti </span> <strong> BESPLATNO </strong> <br>
-                    <a href="https://m.me/afinidata?ref=shared_activity"> Kliknite ovdje </a>
-	            <?php  } elseif($lang == 'ka') { ?>
-                    <h1> +500 აქტივობები </h1>
-                    <h2> სპეციფიკური თქვენი პატარა </h2>
-                    <span> დაიწყეთ ახლა სრულად </span> <strong> უფასო </ strong> <br> <br>
-                    <a href="https://m.me/afinidata?ref=shared_activity"> დააჭირეთ აქ </a>
-	            <?php  } elseif($lang == 'kk') { ?>
-                    <h1> +500 іс-шаралар </h1>
-                    <h2> сіздің кішкентайыңызға арналған </h2>
-                    <span> Қазір толығымен бастаңыз </span> <strong> ТЕГІН </strong> <br>
-                    <a href="https://m.me/afinidata?ref=shared_activity"> Мұнда басыңыз </a>
-	            <?php  } elseif($lang == 'ky') { ?>
-                    <h1> +500 иш-аракеттер </h1>
-                    <h2> кичинекейиңизге мүнөздүү </h2>
-                    <span> Азыр толугу менен баштаңыз </span> <strong> АКЫСЫЗ </strong> <br>
-                    <a href="https://m.me/afinidata?ref=shared_activity"> Бул жерди басыңыз </a>
-	            <?php  } elseif($lang == 'mk') { ?>
-                    <h1> +500 активности </h1>
-                    <h2> специфично за вашето малечко </h2>
-                    <span> Започнете сега целосно </span> <strong> БЕСПЛАТНО </strong> <br>
-                    <a href="https://m.me/afinidata?ref=shared_activity"> Кликнете овде </a>
-	            <?php  } elseif($lang == 'ro') { ?>
-                    <h1> +500 de activități </h1>
-                    <h2> specific pentru micuțul tău </h2>
-                    <span> Începeți acum complet </span> <strong> GRATUIT </strong> <br>
-                    <a href="https://m.me/afinidata?ref=shared_activity"> Faceți clic aici </a>
-	            <?php  } elseif($lang == 'sr') { ?>
-                    <х1> +500 активности </х1>
-                    <х2> специфично за вашег малишана </х2>
-                    <спан> Почните одмах у потпуности </спан> <стронг> БЕСПЛАТНО </стронг> <бр>
-                    <а хреф="хттпс://м.ме/афинидата?реф=схаред_ацтивити"> Кликните овде </а>
-	            <?php  } elseif($lang == 'tg') { ?>
-                    <h1> +500 фаъолият </h1>
-                    <h2> барои мушаххаси кӯдаки шумо </h2>
-                    <span> Ҳоло пурра оғоз кунед </span> <strong> РОЙГОН </strong> <br>
-                    <a href="https://m.me/afinidata?ref=shared_activity"> Инҷоро пахш кунед </a>
-	            <?php  } elseif($lang == 'tr') { ?>
-                    <h1> +500 etkinlik </h1>
-                    <h2> küçük çocuğunuza özgü </h2>
-                    <span> Şimdi tamamen başlayın </span> <strong> ÜCRETSİZ </strong> <br>
-                    <a href="https://m.me/afinidata?ref=shared_activity"> Buraya Tıklayın </a>
-	            <?php  } elseif($lang == 'tk') { ?>
-                    <h1> +500 çäreler </h1>
-                    kiçiňiz üçin <h2> mahsus </h2>
-                    <span> Indi doly başlaň </span> <strong> MUGT </strong> <br>
-                    <a href="https://m.me/afinidata?ref=shared_activity"> Şu ýere basyň </a>
-	            <?php  } elseif($lang == 'uk') { ?>
-                    <h1> +500 заходів </h1>
-                    <h2> специфічно для вашого маленького </h2>
-                    <span> Почніть зараз повністю </span> <strong> БЕЗКОШТОВНО </strong> <br>
-                    <a href="https://m.me/afinidata?ref=shared_activity"> Натисніть тут </a>
-	            <?php  } elseif($lang == 'uz') { ?>
-                    <h1> +500 ta faoliyat </h1>
-                    <h2> kichkinangizga xos </h2>
-                    <span> Endi to'liq boshlang </span> <strong> BEPUL </strong> <br>
-                    <a href="https://m.me/afinidata?ref=shared_activity"> Bu yerni bosing </a>
-	            <?php } else { ?>
-                    <h1>+500 personalized</h1>
-                    <h2>activities for your child</h2>
-                    <a href="https://m.me/afinidata?ref=shared_activity">Click Here</a>
-	            <?php } ?>
+<?php if(!is_user_logged_in()) { ?>
+    <?php if(!$license) { ?>
+        <div class="disclaimer">
+            <div class="disclaimer-content">
+                <button class="disclaimer-close">
+                    <img src="<?php bloginfo('template_url');?>/assets/images/button.png" class="close" alt="">
+                </button>
+                <img src="<?php bloginfo('template_url');?>/assets/images/shared.jpg" alt="">
+                <div class="text-disclaimer">
+                    <?php if($lang == 'es') { ?>
+                        <h1>+500 actividades</h1>
+                        <h2>específicas para tu peque</h2>
+                        <span>Comienza ahora totalmente </span><strong>GRATIS</strong><br>
+                        <a href="https://m.me/afinidata?ref=shared_activity">Click Aquí</a>
+                    <?php  } elseif($lang == 'hy') { ?>
+                        <h1> +500 գործողություններ </h1>
+                        <h2> հատուկ ձեր փոքրիկի համար </h2>
+                        <span> Սկսեք այժմ ամբողջությամբ </span> <strong> ԱՆՎԱՐ </ strong> <br> <br>
+                        <a href="https://m.me/afinidata?ref=shared_activity"> Սեղմեք այստեղ </a>
+                    <?php  } elseif($lang == 'az') { ?>
+                        <h1>+500 fəaliyyət</h1>
+                        <h2>kiçik bir xüsusi</h2>
+                        <span>İndi tam başlayın</span><strong>PULSUZ</strong><br>
+                        <a href="https://m.me/afinidata?ref=shared_activity">Bura basın</a>
+                    <?php  } elseif($lang == 'be') { ?>
+                        <h1> +500 мерапрыемстваў </h1>
+                        <h2> канкрэтна для вашага маленькага </h2>
+                        <span> Пачніце цалкам </span> <strong> БЯСПЛАТНА </strong> <br>
+                        <a href="https://m.me/afinidata?ref=shared_activity"> Націсніце тут </a>
+                    <?php  } elseif($lang == 'bs') { ?>
+                        <h1> +500 aktivnosti </h1>
+                        <h2> specifično za vašeg mališana </h2>
+                        <span> Počnite sada u potpunosti </span> <strong> BESPLATNO </strong> <br>
+                        <a href="https://m.me/afinidata?ref=shared_activity"> Kliknite ovde </a>
+                    <?php  } elseif($lang == 'bg') { ?>
+                        <h1> +500 дейности </h1>
+                        <h2> специфичен за вашия малък </h2>
+                        <span> Започнете сега напълно </span> <strong> БЕЗПЛАТНО </strong> <br>
+                        <a href="https://m.me/afinidata?ref=shared_activity"> Кликнете тук </a>
+                    <?php  } elseif($lang == 'hr') { ?>
+                        <h1> +500 aktivnosti </h1>
+                        <h2> specifično za vašeg mališana </h2>
+                        <span> Počnite sada u potpunosti </span> <strong> BESPLATNO </strong> <br>
+                        <a href="https://m.me/afinidata?ref=shared_activity"> Kliknite ovdje </a>
+                    <?php  } elseif($lang == 'ka') { ?>
+                        <h1> +500 აქტივობები </h1>
+                        <h2> სპეციფიკური თქვენი პატარა </h2>
+                        <span> დაიწყეთ ახლა სრულად </span> <strong> უფასო </ strong> <br> <br>
+                        <a href="https://m.me/afinidata?ref=shared_activity"> დააჭირეთ აქ </a>
+                    <?php  } elseif($lang == 'kk') { ?>
+                        <h1> +500 іс-шаралар </h1>
+                        <h2> сіздің кішкентайыңызға арналған </h2>
+                        <span> Қазір толығымен бастаңыз </span> <strong> ТЕГІН </strong> <br>
+                        <a href="https://m.me/afinidata?ref=shared_activity"> Мұнда басыңыз </a>
+                    <?php  } elseif($lang == 'ky') { ?>
+                        <h1> +500 иш-аракеттер </h1>
+                        <h2> кичинекейиңизге мүнөздүү </h2>
+                        <span> Азыр толугу менен баштаңыз </span> <strong> АКЫСЫЗ </strong> <br>
+                        <a href="https://m.me/afinidata?ref=shared_activity"> Бул жерди басыңыз </a>
+                    <?php  } elseif($lang == 'mk') { ?>
+                        <h1> +500 активности </h1>
+                        <h2> специфично за вашето малечко </h2>
+                        <span> Започнете сега целосно </span> <strong> БЕСПЛАТНО </strong> <br>
+                        <a href="https://m.me/afinidata?ref=shared_activity"> Кликнете овде </a>
+                    <?php  } elseif($lang == 'ro') { ?>
+                        <h1> +500 de activități </h1>
+                        <h2> specific pentru micuțul tău </h2>
+                        <span> Începeți acum complet </span> <strong> GRATUIT </strong> <br>
+                        <a href="https://m.me/afinidata?ref=shared_activity"> Faceți clic aici </a>
+                    <?php  } elseif($lang == 'sr') { ?>
+                        <х1> +500 активности </х1>
+                        <х2> специфично за вашег малишана </х2>
+                        <спан> Почните одмах у потпуности </спан> <стронг> БЕСПЛАТНО </стронг> <бр>
+                        <а хреф="хттпс://м.ме/афинидата?реф=схаред_ацтивити"> Кликните овде </а>
+                    <?php  } elseif($lang == 'tg') { ?>
+                        <h1> +500 фаъолият </h1>
+                        <h2> барои мушаххаси кӯдаки шумо </h2>
+                        <span> Ҳоло пурра оғоз кунед </span> <strong> РОЙГОН </strong> <br>
+                        <a href="https://m.me/afinidata?ref=shared_activity"> Инҷоро пахш кунед </a>
+                    <?php  } elseif($lang == 'tr') { ?>
+                        <h1> +500 etkinlik </h1>
+                        <h2> küçük çocuğunuza özgü </h2>
+                        <span> Şimdi tamamen başlayın </span> <strong> ÜCRETSİZ </strong> <br>
+                        <a href="https://m.me/afinidata?ref=shared_activity"> Buraya Tıklayın </a>
+                    <?php  } elseif($lang == 'tk') { ?>
+                        <h1> +500 çäreler </h1>
+                        kiçiňiz üçin <h2> mahsus </h2>
+                        <span> Indi doly başlaň </span> <strong> MUGT </strong> <br>
+                        <a href="https://m.me/afinidata?ref=shared_activity"> Şu ýere basyň </a>
+                    <?php  } elseif($lang == 'uk') { ?>
+                        <h1> +500 заходів </h1>
+                        <h2> специфічно для вашого маленького </h2>
+                        <span> Почніть зараз повністю </span> <strong> БЕЗКОШТОВНО </strong> <br>
+                        <a href="https://m.me/afinidata?ref=shared_activity"> Натисніть тут </a>
+                    <?php  } elseif($lang == 'uz') { ?>
+                        <h1> +500 ta faoliyat </h1>
+                        <h2> kichkinangizga xos </h2>
+                        <span> Endi to'liq boshlang </span> <strong> BEPUL </strong> <br>
+                        <a href="https://m.me/afinidata?ref=shared_activity"> Bu yerni bosing </a>
+                    <?php } else { ?>
+                        <h1>+500 personalized</h1>
+                        <h2>activities for your child</h2>
+                        <a href="https://m.me/afinidata?ref=shared_activity">Click Here</a>
+                    <?php } ?>
+                </div>
             </div>
         </div>
-    </div>
+    <?php } ?>
 <?php } ?>
 <?php get_footer(); ?>
