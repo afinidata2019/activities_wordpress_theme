@@ -630,3 +630,76 @@ body.customize-support {
 .child-details {
     display: none;
 }
+
+.form-box {
+    text-align: center;
+}
+
+.form-box h2 {
+    margin-bottom: 1em;
+}
+
+.form-box p {
+    font-size: 1.2em;
+    margin-bottom: 2em;
+}
+
+.form-box label,
+.form-box input,
+.form-box select{
+    display: block;
+    text-align: left;
+    margin-bottom: .5em;
+    width: 100%;
+}
+
+.form-box input {
+    padding: 1em .5em;
+    width: 100%;
+    margin-bottom: 1.5em;
+    background: rgba(0,0,0, .04);
+    border: 1px solid rgba(0,0,0, .1);
+}
+
+.form-box input option {
+    padding: 0 1em;
+    outline: none;
+    border: none;
+}
+
+.form-box select {
+    padding: 1em;
+}
+
+.form-box input[type='submit'] {
+    display: inline-block;
+    background: #F3AA18;
+    color: #fff;
+    font-size: 1.5em;
+    width: auto;
+    padding: .5em 1.5em;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    border-radius: 3em;
+}
+
+.form-box input:disabled,
+.form-box select:disabled {
+    opacity: .6;
+}
+
+.form-box .form-alert {
+    color: #98C050;
+    display: none;
+}
+
+.form-box .form-error {
+    color: #f72323;
+    display: none;
+}
+
+.form-box .form-error p,
+.form-box .form-alert p {
+    margin-bottom: 1em;
+}

@@ -14,3 +14,6 @@ require_once ('config/taxonomies.php');
 
 //thumbs size
 require_once ('config/images_size.php');
+
+//panels
+require_once ('config/panels/panels.php');

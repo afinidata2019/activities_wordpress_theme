@@ -248,10 +248,10 @@ get_header();
 
 <?php if(!$license) { ?>
   <div class="container small-container">
-      <div class="single-box">
+      <div class="single-box form-box">
           <h2>Suscríbete para recibir actividades para tu bebé.</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, inventore.</p>
-          <form action="." method="post" data-default-uri="http://127.0.0.1:8000" id="suscribe-form"
+          <p>Si ya estas recibiendo nuestras actividades en Facebook Messenger puedes omitir este paso. ¡Sigue disfrutando tus actividades!</p>
+          <form action="." method="post" data-default-uri="<?php echo get_theme_mod("core_url"); ?>" id="suscribe-form"
                 data-language="<?php echo $lang; ?>">
               <div class="form-control"><label for="">Nombre: </label>
                   <input type="text" name="first_name" required>
@@ -259,8 +259,12 @@ get_header();
               <div class="form-control"><label for="">Apellido: </label>
                   <input type="text" name="last_name" required>
               </div>
+
+              <div class="form-control"><label for="">Correo electrónico: </label>
+                  <input type="email" name="email" required>
+              </div>
               <div class="form-control">
-                  <label for="">Tu peque ya nació?</label>
+                  <label for="">¿Tu peque ya nació?</label>
                   <select name="has_child" id="" required>
                       <option value="no" selected>No</option>
                       <option value="yes">Si</option>
@@ -276,6 +280,14 @@ get_header();
               </div>
               <input type="submit" value="Suscribirme">
           </form>
+          <div class="form-alert">
+              <p>Se te estará redirigiendo al chat para que empieces a recibir actividades personalizadas. Gracias por suscribirte!</p>
+              <p>Si no te abre el chat automáticamente presiona <a class="redirect_link" href="#">aquí</a>.</p>
+          </div>
+          <div class="form-error">
+              <p>¡Oh no! Ha ocurrido un error.</p>
+              <p>Sentimos las molestias, verifica tu conexión a internet e inténtalo nuevamente en unos minutos..</p>
+          </div>
       </div>
   </div>
 <?php } ?>
