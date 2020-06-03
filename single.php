@@ -247,48 +247,860 @@ get_header();
 <?php } ?>
 
 <?php if(!$license) { ?>
-  <div class="container small-container">
-      <div class="single-box form-box">
-          <h2>Suscríbete para recibir actividades para tu bebé.</h2>
-          <p>Si ya estas recibiendo nuestras actividades en Facebook Messenger puedes omitir este paso. ¡Sigue disfrutando tus actividades!</p>
-          <form action="." method="post" data-default-uri="<?php echo get_theme_mod("core_url"); ?>" id="suscribe-form"
-                data-language="<?php echo $lang; ?>">
-              <div class="form-control"><label for="">Nombre: </label>
-                  <input type="text" name="first_name" required>
-              </div>
-              <div class="form-control"><label for="">Apellido: </label>
-                  <input type="text" name="last_name" required>
-              </div>
 
-              <div class="form-control"><label for="">Correo electrónico: </label>
-                  <input type="email" name="email" required>
-              </div>
-              <div class="form-control">
-                  <label for="">¿Tu peque ya nació?</label>
-                  <select name="has_child" id="" required>
-                      <option value="no" selected>No</option>
-                      <option value="yes">Si</option>
-                  </select>
-              </div>
-              <div class="child-details">
-                  <div class="form-control"><label for="">Nombre o sobrenombre de tu bebé: </label>
-                      <input type="text" name="child_name">
-                  </div>
-                  <div class="form-control"><label for="">Fecha de nacimiento: </label>
-                      <input type="text" class="datepicker-input" name="birthday">
-                  </div>
-              </div>
-              <input type="submit" value="Suscribirme">
-          </form>
-          <div class="form-alert">
-              <p>Se te estará redirigiendo al chat para que empieces a recibir actividades personalizadas. Gracias por suscribirte!</p>
-              <p>Si no te abre el chat automáticamente presiona <a class="redirect_link" href="#">aquí</a>.</p>
-          </div>
-          <div class="form-error">
-              <p>¡Oh no! Ha ocurrido un error.</p>
-              <p>Sentimos las molestias, verifica tu conexión a internet e inténtalo nuevamente en unos minutos..</p>
-          </div>
-      </div>
-  </div>
+    <?php if($lang == 'es') { ?>
+        <div class="container small-container">
+            <div class="single-box form-box">
+                <h2>Suscríbete para recibir actividades para tu bebé.</h2>
+                <p>Si ya estas recibiendo nuestras actividades en Facebook Messenger puedes omitir este paso. ¡Sigue disfrutando tus actividades!</p>
+                <form action="." method="post" data-default-uri="<?php echo get_theme_mod("core_url"); ?>" id="suscribe-form"
+                      data-language="<?php echo $lang; ?>">
+                    <div class="form-control"><label for="">Nombre: </label>
+                        <input type="text" name="first_name" required>
+                    </div>
+                    <div class="form-control"><label for="">Apellido: </label>
+                        <input type="text" name="last_name" required>
+                    </div>
+
+                    <div class="form-control"><label for="">Correo electrónico: </label>
+                        <input type="email" name="email" required>
+                    </div>
+                    <div class="form-control">
+                        <label for="">¿Tu peque ya nació?</label>
+                        <select name="has_child" id="" required>
+                            <option value="no" selected>No</option>
+                            <option value="yes">Si</option>
+                        </select>
+                    </div>
+                    <div class="child-details">
+                        <div class="form-control"><label for="">Nombre o sobrenombre de tu bebé: </label>
+                            <input type="text" name="child_name">
+                        </div>
+                        <div class="form-control"><label for="">Fecha de nacimiento: </label>
+                            <input type="text" class="datepicker-input" name="birthday">
+                        </div>
+                    </div>
+                    <input type="submit" value="Suscribirme">
+                </form>
+                <div class="form-alert">
+                    <p>Se te estará redirigiendo al chat para que empieces a recibir actividades personalizadas. Gracias por suscribirte!</p>
+                    <p>Si no te abre el chat automáticamente presiona <a class="redirect_link" href="#">aquí</a>.</p>
+                </div>
+                <div class="form-error">
+                    <p>¡Oh no! Ha ocurrido un error.</p>
+                    <p>Sentimos las molestias, verifica tu conexión a internet e inténtalo nuevamente en unos minutos.</p>
+                </div>
+            </div>
+        </div>
+
+    <?php  } elseif($lang == 'hy') { ?>
+        <div class="container small-container">
+            <div class="single-box form-box">
+                <h2>Բաժանորդագրվեք ձեր երեխայի համար գործողություններ ստանալու համար:</h2>
+                <p>Եթե ​​դուք արդեն ստանում եք մեր գործունեությունը Facebook Messenger- ում, կարող եք բաց թողնել այս քայլը: Շարունակեք վայելել ձեր գործունեությունը:</p>
+                <form action="." method="post" data-default-uri="<?php echo get_theme_mod("core_url"); ?>" id="suscribe-form"
+                      data-language="<?php echo $lang; ?>">
+                    <div class="form-control"><label for="">Անուն: </label>
+                        <input type="text" name="first_name" required>
+                    </div>
+                    <div class="form-control"><label for="">Ազգանուն </label>
+                        <input type="text" name="last_name" required>
+                    </div>
+
+                    <div class="form-control"><label for="">Էլ. Փոստ.</label>
+                        <input type="email" name="email" required>
+                    </div>
+                    <div class="form-control">
+                        <label for="">Ձեր փոքրիկն արդեն ծնվել է:</label>
+                        <select name="has_child" id="" required>
+                            <option value="no" selected>Ոչ</option>
+                            <option value="yes">Այո</option>
+                        </select>
+                    </div>
+                    <div class="child-details">
+                        <div class="form-control"><label for="">Ձեր երեխայի անունը կամ մականունը.</label>
+                            <input type="text" name="child_name">
+                        </div>
+                        <div class="form-control"><label for="">Ծննդյան օր: </label>
+                            <input type="text" class="datepicker-input" name="birthday">
+                        </div>
+                    </div>
+                    <input type="submit" value="Բաժանորդագրվել">
+                </form>
+                <div class="form-alert">
+                    <p>Ձեզ կուղղորդվի դեպի զրուցարան, որպեսզի կարողանաք սկսել անհատականացված գործողություններ: Շնորհակալություն բաժանորդագրվելու համար:</p>
+                    <p>Եթե ​​զրույցը չի բացվում ինքնաբերաբար, սեղմեք <a class="redirect_link" href="#">այստեղ</a>:</p>
+                </div>
+                <div class="form-error">
+                    <p>Օ ոչ! Սխալ է տեղի ունեցել.</p>
+                    <p>Մենք ցավում ենք անհարմարության համար, ստուգեք ձեր ինտերնետային կապը և փորձեք մի քանի րոպեից կրկին փորձել:</p>
+                </div>
+            </div>
+        </div>
+
+    <?php  } elseif($lang == 'az') { ?>
+        <div class="container small-container">
+            <div class="single-box form-box">
+                <h2>Körpəniz üçün tədbirlər almaq üçün abunə olun.</h2>
+                <p>Facebook Messenger-də fəaliyyətlərimizi onsuz da alırsınızsa, bu addımı ata bilərsiniz. Fəaliyyətlərinizdən zövq almağa davam edin!</p>
+                <form action="." method="post" data-default-uri="<?php echo get_theme_mod("core_url"); ?>" id="suscribe-form"
+                      data-language="<?php echo $lang; ?>">
+                    <div class="form-control"><label for="">Adı:</label>
+                        <input type="text" name="first_name" required>
+                    </div>
+                    <div class="form-control"><label for="">Soyadı:</label>
+                        <input type="text" name="last_name" required>
+                    </div>
+
+                    <div class="form-control"><label for="">Elektron poçt:</label>
+                        <input type="email" name="email" required>
+                    </div>
+                    <div class="form-control">
+                        <label for="">Kiçik biriniz artıq doğulub?</label>
+                        <select name="has_child" id="" required>
+                            <option value="no" selected>Yox</option>
+                            <option value="yes">Bəli</option>
+                        </select>
+                    </div>
+                    <div class="child-details">
+                        <div class="form-control"><label for="">Körpənizin adı və ya ləqəb:</label>
+                            <input type="text" name="child_name">
+                        </div>
+                        <div class="form-control"><label for="">Doğum tarixi:</label>
+                            <input type="text" class="datepicker-input" name="birthday">
+                        </div>
+                    </div>
+                    <input type="submit" value="Abunə olun">
+                </form>
+                <div class="form-alert">
+                    <p>Şəxsi fəaliyyətlər almağa başlaya biləcəyiniz üçün söhbətə yönləndiriləcəksiniz. Abunə üçün təşəkkür edirik!</p>
+                    <p>Çat avtomatik açılmırsa, <a class="redirect_link" href="#">vurun</a>.</p>
+                </div>
+                <div class="form-error">
+                    <p>Ah yox! Bir səhv baş verdi.</p>
+                    <p>Narahatçılığa görə üzr istəyirik, internet bağlantınızı yoxlayın və bir neçə dəqiqədən sonra yenidən cəhd edin.</p>
+                </div>
+            </div>
+        </div>
+	<?php  } elseif($lang == 'be') { ?>
+        <div class="container small-container">
+            <div class="single-box form-box">
+                <h2>Падпішыцеся на атрыманне мерапрыемстваў для вашага дзіцяці.</h2>
+                <p>Калі вы ўжо атрымліваеце нашу дзейнасць у Facebook Messenger, вы можаце прапусціць гэты крок. Працягвайце атрымліваць асалоду ад сваёй дзейнасцю!</p>
+                <form action="." method="post" data-default-uri="<?php echo get_theme_mod("core_url"); ?>" id="suscribe-form"
+                      data-language="<?php echo $lang; ?>">
+                    <div class="form-control"><label for="">Імя: </label>
+                        <input type="text" name="first_name" required>
+                    </div>
+                    <div class="form-control"><label for="">Прозвішча:</label>
+                        <input type="text" name="last_name" required>
+                    </div>
+
+                    <div class="form-control"><label for="">Адрас электроннай пошты:</label>
+                        <input type="email" name="email" required>
+                    </div>
+                    <div class="form-control">
+                        <label for="">Ваш маленькі ўжо нарадзіўся?</label>
+                        <select name="has_child" id="" required>
+                            <option value="no" selected>Не</option>
+                            <option value="yes">Так</option>
+                        </select>
+                    </div>
+                    <div class="child-details">
+                        <div class="form-control"><label for="">Імя або псеўданім вашага дзіцяці:</label>
+                            <input type="text" name="child_name">
+                        </div>
+                        <div class="form-control"><label for="">Дата нараджэння: </label>
+                            <input type="text" class="datepicker-input" name="birthday">
+                        </div>
+                    </div>
+                    <input type="submit" value="Падпісацца">
+                </form>
+                <div class="form-alert">
+                    <p>Вы будзеце перанакіраваны ў чат, каб вы маглі пачаць атрымліваць індывідуальныя дзеянні. Дзякуй за падпіску!</p>
+                    <p>Калі чат не адкрыецца аўтаматычна, націсніце<a class="redirect_link" href="#">тут</a>.</p>
+                </div>
+                <div class="form-error">
+                    <p>О не! Адбылася памылка.</p>
+                    <p>Прыносім прабачэнні за нязручнасці, праверце падключэнне да Інтэрнэту і паспрабуйце зноў праз некалькі хвілін.</p>
+                </div>
+            </div>
+        </div>
+
+	<?php  } elseif($lang == 'bs') { ?>
+        <div class="container small-container">
+            <div class="single-box form-box">
+                <h2>Suscríbete para recibir actividades para tu bebé.</h2>
+                <p>Si ya estas recibiendo nuestras actividades en Facebook Messenger puedes omitir este paso. ¡Sigue disfrutando tus actividades!</p>
+                <form action="." method="post" data-default-uri="<?php echo get_theme_mod("core_url"); ?>" id="suscribe-form"
+                      data-language="<?php echo $lang; ?>">
+                    <div class="form-control"><label for="">Nombre: </label>
+                        <input type="text" name="first_name" required>
+                    </div>
+                    <div class="form-control"><label for="">Apellido: </label>
+                        <input type="text" name="last_name" required>
+                    </div>
+
+                    <div class="form-control"><label for="">Correo electrónico: </label>
+                        <input type="email" name="email" required>
+                    </div>
+                    <div class="form-control">
+                        <label for="">¿Tu peque ya nació?</label>
+                        <select name="has_child" id="" required>
+                            <option value="no" selected>No</option>
+                            <option value="yes">Si</option>
+                        </select>
+                    </div>
+                    <div class="child-details">
+                        <div class="form-control"><label for="">Nombre o sobrenombre de tu bebé: </label>
+                            <input type="text" name="child_name">
+                        </div>
+                        <div class="form-control"><label for="">Fecha de nacimiento: </label>
+                            <input type="text" class="datepicker-input" name="birthday">
+                        </div>
+                    </div>
+                    <input type="submit" value="Suscribirme">
+                </form>
+                <div class="form-alert">
+                    <p>Se te estará redirigiendo al chat para que empieces a recibir actividades personalizadas. Gracias por suscribirte!</p>
+                    <p>Si no te abre el chat automáticamente presiona <a class="redirect_link" href="#">aquí</a>.</p>
+                </div>
+                <div class="form-error">
+                    <p>¡Oh no! Ha ocurrido un error.</p>
+                    <p>Sentimos las molestias, verifica tu conexión a internet e inténtalo nuevamente en unos minutos.</p>
+                </div>
+            </div>
+        </div>
+
+	<?php  } elseif($lang == 'bg') { ?>
+        <div class="container small-container">
+            <div class="single-box form-box">
+                <h2>Suscríbete para recibir actividades para tu bebé.</h2>
+                <p>Si ya estas recibiendo nuestras actividades en Facebook Messenger puedes omitir este paso. ¡Sigue disfrutando tus actividades!</p>
+                <form action="." method="post" data-default-uri="<?php echo get_theme_mod("core_url"); ?>" id="suscribe-form"
+                      data-language="<?php echo $lang; ?>">
+                    <div class="form-control"><label for="">Nombre: </label>
+                        <input type="text" name="first_name" required>
+                    </div>
+                    <div class="form-control"><label for="">Apellido: </label>
+                        <input type="text" name="last_name" required>
+                    </div>
+
+                    <div class="form-control"><label for="">Correo electrónico: </label>
+                        <input type="email" name="email" required>
+                    </div>
+                    <div class="form-control">
+                        <label for="">¿Tu peque ya nació?</label>
+                        <select name="has_child" id="" required>
+                            <option value="no" selected>No</option>
+                            <option value="yes">Si</option>
+                        </select>
+                    </div>
+                    <div class="child-details">
+                        <div class="form-control"><label for="">Nombre o sobrenombre de tu bebé: </label>
+                            <input type="text" name="child_name">
+                        </div>
+                        <div class="form-control"><label for="">Fecha de nacimiento: </label>
+                            <input type="text" class="datepicker-input" name="birthday">
+                        </div>
+                    </div>
+                    <input type="submit" value="Suscribirme">
+                </form>
+                <div class="form-alert">
+                    <p>Se te estará redirigiendo al chat para que empieces a recibir actividades personalizadas. Gracias por suscribirte!</p>
+                    <p>Si no te abre el chat automáticamente presiona <a class="redirect_link" href="#">aquí</a>.</p>
+                </div>
+                <div class="form-error">
+                    <p>¡Oh no! Ha ocurrido un error.</p>
+                    <p>Sentimos las molestias, verifica tu conexión a internet e inténtalo nuevamente en unos minutos.</p>
+                </div>
+            </div>
+        </div>
+
+	<?php  } elseif($lang == 'hr') { ?>
+        <div class="container small-container">
+            <div class="single-box form-box">
+                <h2>Suscríbete para recibir actividades para tu bebé.</h2>
+                <p>Si ya estas recibiendo nuestras actividades en Facebook Messenger puedes omitir este paso. ¡Sigue disfrutando tus actividades!</p>
+                <form action="." method="post" data-default-uri="<?php echo get_theme_mod("core_url"); ?>" id="suscribe-form"
+                      data-language="<?php echo $lang; ?>">
+                    <div class="form-control"><label for="">Nombre: </label>
+                        <input type="text" name="first_name" required>
+                    </div>
+                    <div class="form-control"><label for="">Apellido: </label>
+                        <input type="text" name="last_name" required>
+                    </div>
+
+                    <div class="form-control"><label for="">Correo electrónico: </label>
+                        <input type="email" name="email" required>
+                    </div>
+                    <div class="form-control">
+                        <label for="">¿Tu peque ya nació?</label>
+                        <select name="has_child" id="" required>
+                            <option value="no" selected>No</option>
+                            <option value="yes">Si</option>
+                        </select>
+                    </div>
+                    <div class="child-details">
+                        <div class="form-control"><label for="">Nombre o sobrenombre de tu bebé: </label>
+                            <input type="text" name="child_name">
+                        </div>
+                        <div class="form-control"><label for="">Fecha de nacimiento: </label>
+                            <input type="text" class="datepicker-input" name="birthday">
+                        </div>
+                    </div>
+                    <input type="submit" value="Suscribirme">
+                </form>
+                <div class="form-alert">
+                    <p>Se te estará redirigiendo al chat para que empieces a recibir actividades personalizadas. Gracias por suscribirte!</p>
+                    <p>Si no te abre el chat automáticamente presiona <a class="redirect_link" href="#">aquí</a>.</p>
+                </div>
+                <div class="form-error">
+                    <p>¡Oh no! Ha ocurrido un error.</p>
+                    <p>Sentimos las molestias, verifica tu conexión a internet e inténtalo nuevamente en unos minutos.</p>
+                </div>
+            </div>
+        </div>
+
+	<?php  } elseif($lang == 'ka') { ?>
+        <div class="container small-container">
+            <div class="single-box form-box">
+                <h2>Suscríbete para recibir actividades para tu bebé.</h2>
+                <p>Si ya estas recibiendo nuestras actividades en Facebook Messenger puedes omitir este paso. ¡Sigue disfrutando tus actividades!</p>
+                <form action="." method="post" data-default-uri="<?php echo get_theme_mod("core_url"); ?>" id="suscribe-form"
+                      data-language="<?php echo $lang; ?>">
+                    <div class="form-control"><label for="">Nombre: </label>
+                        <input type="text" name="first_name" required>
+                    </div>
+                    <div class="form-control"><label for="">Apellido: </label>
+                        <input type="text" name="last_name" required>
+                    </div>
+
+                    <div class="form-control"><label for="">Correo electrónico: </label>
+                        <input type="email" name="email" required>
+                    </div>
+                    <div class="form-control">
+                        <label for="">¿Tu peque ya nació?</label>
+                        <select name="has_child" id="" required>
+                            <option value="no" selected>No</option>
+                            <option value="yes">Si</option>
+                        </select>
+                    </div>
+                    <div class="child-details">
+                        <div class="form-control"><label for="">Nombre o sobrenombre de tu bebé: </label>
+                            <input type="text" name="child_name">
+                        </div>
+                        <div class="form-control"><label for="">Fecha de nacimiento: </label>
+                            <input type="text" class="datepicker-input" name="birthday">
+                        </div>
+                    </div>
+                    <input type="submit" value="Suscribirme">
+                </form>
+                <div class="form-alert">
+                    <p>Se te estará redirigiendo al chat para que empieces a recibir actividades personalizadas. Gracias por suscribirte!</p>
+                    <p>Si no te abre el chat automáticamente presiona <a class="redirect_link" href="#">aquí</a>.</p>
+                </div>
+                <div class="form-error">
+                    <p>¡Oh no! Ha ocurrido un error.</p>
+                    <p>Sentimos las molestias, verifica tu conexión a internet e inténtalo nuevamente en unos minutos.</p>
+                </div>
+            </div>
+        </div>
+
+	<?php  } elseif($lang == 'kk') { ?>
+        <div class="container small-container">
+            <div class="single-box form-box">
+                <h2>Suscríbete para recibir actividades para tu bebé.</h2>
+                <p>Si ya estas recibiendo nuestras actividades en Facebook Messenger puedes omitir este paso. ¡Sigue disfrutando tus actividades!</p>
+                <form action="." method="post" data-default-uri="<?php echo get_theme_mod("core_url"); ?>" id="suscribe-form"
+                      data-language="<?php echo $lang; ?>">
+                    <div class="form-control"><label for="">Nombre: </label>
+                        <input type="text" name="first_name" required>
+                    </div>
+                    <div class="form-control"><label for="">Apellido: </label>
+                        <input type="text" name="last_name" required>
+                    </div>
+
+                    <div class="form-control"><label for="">Correo electrónico: </label>
+                        <input type="email" name="email" required>
+                    </div>
+                    <div class="form-control">
+                        <label for="">¿Tu peque ya nació?</label>
+                        <select name="has_child" id="" required>
+                            <option value="no" selected>No</option>
+                            <option value="yes">Si</option>
+                        </select>
+                    </div>
+                    <div class="child-details">
+                        <div class="form-control"><label for="">Nombre o sobrenombre de tu bebé: </label>
+                            <input type="text" name="child_name">
+                        </div>
+                        <div class="form-control"><label for="">Fecha de nacimiento: </label>
+                            <input type="text" class="datepicker-input" name="birthday">
+                        </div>
+                    </div>
+                    <input type="submit" value="Suscribirme">
+                </form>
+                <div class="form-alert">
+                    <p>Se te estará redirigiendo al chat para que empieces a recibir actividades personalizadas. Gracias por suscribirte!</p>
+                    <p>Si no te abre el chat automáticamente presiona <a class="redirect_link" href="#">aquí</a>.</p>
+                </div>
+                <div class="form-error">
+                    <p>¡Oh no! Ha ocurrido un error.</p>
+                    <p>Sentimos las molestias, verifica tu conexión a internet e inténtalo nuevamente en unos minutos.</p>
+                </div>
+            </div>
+        </div>
+
+	<?php  } elseif($lang == 'ky') { ?>
+        <div class="container small-container">
+            <div class="single-box form-box">
+                <h2>Suscríbete para recibir actividades para tu bebé.</h2>
+                <p>Si ya estas recibiendo nuestras actividades en Facebook Messenger puedes omitir este paso. ¡Sigue disfrutando tus actividades!</p>
+                <form action="." method="post" data-default-uri="<?php echo get_theme_mod("core_url"); ?>" id="suscribe-form"
+                      data-language="<?php echo $lang; ?>">
+                    <div class="form-control"><label for="">Nombre: </label>
+                        <input type="text" name="first_name" required>
+                    </div>
+                    <div class="form-control"><label for="">Apellido: </label>
+                        <input type="text" name="last_name" required>
+                    </div>
+
+                    <div class="form-control"><label for="">Correo electrónico: </label>
+                        <input type="email" name="email" required>
+                    </div>
+                    <div class="form-control">
+                        <label for="">¿Tu peque ya nació?</label>
+                        <select name="has_child" id="" required>
+                            <option value="no" selected>No</option>
+                            <option value="yes">Si</option>
+                        </select>
+                    </div>
+                    <div class="child-details">
+                        <div class="form-control"><label for="">Nombre o sobrenombre de tu bebé: </label>
+                            <input type="text" name="child_name">
+                        </div>
+                        <div class="form-control"><label for="">Fecha de nacimiento: </label>
+                            <input type="text" class="datepicker-input" name="birthday">
+                        </div>
+                    </div>
+                    <input type="submit" value="Suscribirme">
+                </form>
+                <div class="form-alert">
+                    <p>Se te estará redirigiendo al chat para que empieces a recibir actividades personalizadas. Gracias por suscribirte!</p>
+                    <p>Si no te abre el chat automáticamente presiona <a class="redirect_link" href="#">aquí</a>.</p>
+                </div>
+                <div class="form-error">
+                    <p>¡Oh no! Ha ocurrido un error.</p>
+                    <p>Sentimos las molestias, verifica tu conexión a internet e inténtalo nuevamente en unos minutos.</p>
+                </div>
+            </div>
+        </div>
+
+	<?php  } elseif($lang == 'mk') { ?>
+        <div class="container small-container">
+            <div class="single-box form-box">
+                <h2>Suscríbete para recibir actividades para tu bebé.</h2>
+                <p>Si ya estas recibiendo nuestras actividades en Facebook Messenger puedes omitir este paso. ¡Sigue disfrutando tus actividades!</p>
+                <form action="." method="post" data-default-uri="<?php echo get_theme_mod("core_url"); ?>" id="suscribe-form"
+                      data-language="<?php echo $lang; ?>">
+                    <div class="form-control"><label for="">Nombre: </label>
+                        <input type="text" name="first_name" required>
+                    </div>
+                    <div class="form-control"><label for="">Apellido: </label>
+                        <input type="text" name="last_name" required>
+                    </div>
+
+                    <div class="form-control"><label for="">Correo electrónico: </label>
+                        <input type="email" name="email" required>
+                    </div>
+                    <div class="form-control">
+                        <label for="">¿Tu peque ya nació?</label>
+                        <select name="has_child" id="" required>
+                            <option value="no" selected>No</option>
+                            <option value="yes">Si</option>
+                        </select>
+                    </div>
+                    <div class="child-details">
+                        <div class="form-control"><label for="">Nombre o sobrenombre de tu bebé: </label>
+                            <input type="text" name="child_name">
+                        </div>
+                        <div class="form-control"><label for="">Fecha de nacimiento: </label>
+                            <input type="text" class="datepicker-input" name="birthday">
+                        </div>
+                    </div>
+                    <input type="submit" value="Suscribirme">
+                </form>
+                <div class="form-alert">
+                    <p>Se te estará redirigiendo al chat para que empieces a recibir actividades personalizadas. Gracias por suscribirte!</p>
+                    <p>Si no te abre el chat automáticamente presiona <a class="redirect_link" href="#">aquí</a>.</p>
+                </div>
+                <div class="form-error">
+                    <p>¡Oh no! Ha ocurrido un error.</p>
+                    <p>Sentimos las molestias, verifica tu conexión a internet e inténtalo nuevamente en unos minutos.</p>
+                </div>
+            </div>
+        </div>
+
+	<?php  } elseif($lang == 'ro') { ?>
+        <div class="container small-container">
+            <div class="single-box form-box">
+                <h2>Suscríbete para recibir actividades para tu bebé.</h2>
+                <p>Si ya estas recibiendo nuestras actividades en Facebook Messenger puedes omitir este paso. ¡Sigue disfrutando tus actividades!</p>
+                <form action="." method="post" data-default-uri="<?php echo get_theme_mod("core_url"); ?>" id="suscribe-form"
+                      data-language="<?php echo $lang; ?>">
+                    <div class="form-control"><label for="">Nombre: </label>
+                        <input type="text" name="first_name" required>
+                    </div>
+                    <div class="form-control"><label for="">Apellido: </label>
+                        <input type="text" name="last_name" required>
+                    </div>
+
+                    <div class="form-control"><label for="">Correo electrónico: </label>
+                        <input type="email" name="email" required>
+                    </div>
+                    <div class="form-control">
+                        <label for="">¿Tu peque ya nació?</label>
+                        <select name="has_child" id="" required>
+                            <option value="no" selected>No</option>
+                            <option value="yes">Si</option>
+                        </select>
+                    </div>
+                    <div class="child-details">
+                        <div class="form-control"><label for="">Nombre o sobrenombre de tu bebé: </label>
+                            <input type="text" name="child_name">
+                        </div>
+                        <div class="form-control"><label for="">Fecha de nacimiento: </label>
+                            <input type="text" class="datepicker-input" name="birthday">
+                        </div>
+                    </div>
+                    <input type="submit" value="Suscribirme">
+                </form>
+                <div class="form-alert">
+                    <p>Se te estará redirigiendo al chat para que empieces a recibir actividades personalizadas. Gracias por suscribirte!</p>
+                    <p>Si no te abre el chat automáticamente presiona <a class="redirect_link" href="#">aquí</a>.</p>
+                </div>
+                <div class="form-error">
+                    <p>¡Oh no! Ha ocurrido un error.</p>
+                    <p>Sentimos las molestias, verifica tu conexión a internet e inténtalo nuevamente en unos minutos.</p>
+                </div>
+            </div>
+        </div>
+
+	<?php  } elseif($lang == 'sr') { ?>
+        <div class="container small-container">
+            <div class="single-box form-box">
+                <h2>Suscríbete para recibir actividades para tu bebé.</h2>
+                <p>Si ya estas recibiendo nuestras actividades en Facebook Messenger puedes omitir este paso. ¡Sigue disfrutando tus actividades!</p>
+                <form action="." method="post" data-default-uri="<?php echo get_theme_mod("core_url"); ?>" id="suscribe-form"
+                      data-language="<?php echo $lang; ?>">
+                    <div class="form-control"><label for="">Nombre: </label>
+                        <input type="text" name="first_name" required>
+                    </div>
+                    <div class="form-control"><label for="">Apellido: </label>
+                        <input type="text" name="last_name" required>
+                    </div>
+
+                    <div class="form-control"><label for="">Correo electrónico: </label>
+                        <input type="email" name="email" required>
+                    </div>
+                    <div class="form-control">
+                        <label for="">¿Tu peque ya nació?</label>
+                        <select name="has_child" id="" required>
+                            <option value="no" selected>No</option>
+                            <option value="yes">Si</option>
+                        </select>
+                    </div>
+                    <div class="child-details">
+                        <div class="form-control"><label for="">Nombre o sobrenombre de tu bebé: </label>
+                            <input type="text" name="child_name">
+                        </div>
+                        <div class="form-control"><label for="">Fecha de nacimiento: </label>
+                            <input type="text" class="datepicker-input" name="birthday">
+                        </div>
+                    </div>
+                    <input type="submit" value="Suscribirme">
+                </form>
+                <div class="form-alert">
+                    <p>Se te estará redirigiendo al chat para que empieces a recibir actividades personalizadas. Gracias por suscribirte!</p>
+                    <p>Si no te abre el chat automáticamente presiona <a class="redirect_link" href="#">aquí</a>.</p>
+                </div>
+                <div class="form-error">
+                    <p>¡Oh no! Ha ocurrido un error.</p>
+                    <p>Sentimos las molestias, verifica tu conexión a internet e inténtalo nuevamente en unos minutos.</p>
+                </div>
+            </div>
+        </div>
+
+	<?php  } elseif($lang == 'tg') { ?>
+        <div class="container small-container">
+            <div class="single-box form-box">
+                <h2>Suscríbete para recibir actividades para tu bebé.</h2>
+                <p>Si ya estas recibiendo nuestras actividades en Facebook Messenger puedes omitir este paso. ¡Sigue disfrutando tus actividades!</p>
+                <form action="." method="post" data-default-uri="<?php echo get_theme_mod("core_url"); ?>" id="suscribe-form"
+                      data-language="<?php echo $lang; ?>">
+                    <div class="form-control"><label for="">Nombre: </label>
+                        <input type="text" name="first_name" required>
+                    </div>
+                    <div class="form-control"><label for="">Apellido: </label>
+                        <input type="text" name="last_name" required>
+                    </div>
+
+                    <div class="form-control"><label for="">Correo electrónico: </label>
+                        <input type="email" name="email" required>
+                    </div>
+                    <div class="form-control">
+                        <label for="">¿Tu peque ya nació?</label>
+                        <select name="has_child" id="" required>
+                            <option value="no" selected>No</option>
+                            <option value="yes">Si</option>
+                        </select>
+                    </div>
+                    <div class="child-details">
+                        <div class="form-control"><label for="">Nombre o sobrenombre de tu bebé: </label>
+                            <input type="text" name="child_name">
+                        </div>
+                        <div class="form-control"><label for="">Fecha de nacimiento: </label>
+                            <input type="text" class="datepicker-input" name="birthday">
+                        </div>
+                    </div>
+                    <input type="submit" value="Suscribirme">
+                </form>
+                <div class="form-alert">
+                    <p>Se te estará redirigiendo al chat para que empieces a recibir actividades personalizadas. Gracias por suscribirte!</p>
+                    <p>Si no te abre el chat automáticamente presiona <a class="redirect_link" href="#">aquí</a>.</p>
+                </div>
+                <div class="form-error">
+                    <p>¡Oh no! Ha ocurrido un error.</p>
+                    <p>Sentimos las molestias, verifica tu conexión a internet e inténtalo nuevamente en unos minutos.</p>
+                </div>
+            </div>
+        </div>
+
+	<?php  } elseif($lang == 'tr') { ?>
+        <div class="container small-container">
+            <div class="single-box form-box">
+                <h2>Suscríbete para recibir actividades para tu bebé.</h2>
+                <p>Si ya estas recibiendo nuestras actividades en Facebook Messenger puedes omitir este paso. ¡Sigue disfrutando tus actividades!</p>
+                <form action="." method="post" data-default-uri="<?php echo get_theme_mod("core_url"); ?>" id="suscribe-form"
+                      data-language="<?php echo $lang; ?>">
+                    <div class="form-control"><label for="">Nombre: </label>
+                        <input type="text" name="first_name" required>
+                    </div>
+                    <div class="form-control"><label for="">Apellido: </label>
+                        <input type="text" name="last_name" required>
+                    </div>
+
+                    <div class="form-control"><label for="">Correo electrónico: </label>
+                        <input type="email" name="email" required>
+                    </div>
+                    <div class="form-control">
+                        <label for="">¿Tu peque ya nació?</label>
+                        <select name="has_child" id="" required>
+                            <option value="no" selected>No</option>
+                            <option value="yes">Si</option>
+                        </select>
+                    </div>
+                    <div class="child-details">
+                        <div class="form-control"><label for="">Nombre o sobrenombre de tu bebé: </label>
+                            <input type="text" name="child_name">
+                        </div>
+                        <div class="form-control"><label for="">Fecha de nacimiento: </label>
+                            <input type="text" class="datepicker-input" name="birthday">
+                        </div>
+                    </div>
+                    <input type="submit" value="Suscribirme">
+                </form>
+                <div class="form-alert">
+                    <p>Se te estará redirigiendo al chat para que empieces a recibir actividades personalizadas. Gracias por suscribirte!</p>
+                    <p>Si no te abre el chat automáticamente presiona <a class="redirect_link" href="#">aquí</a>.</p>
+                </div>
+                <div class="form-error">
+                    <p>¡Oh no! Ha ocurrido un error.</p>
+                    <p>Sentimos las molestias, verifica tu conexión a internet e inténtalo nuevamente en unos minutos.</p>
+                </div>
+            </div>
+        </div>
+
+	<?php  } elseif($lang == 'tk') { ?>
+        <div class="container small-container">
+            <div class="single-box form-box">
+                <h2>Suscríbete para recibir actividades para tu bebé.</h2>
+                <p>Si ya estas recibiendo nuestras actividades en Facebook Messenger puedes omitir este paso. ¡Sigue disfrutando tus actividades!</p>
+                <form action="." method="post" data-default-uri="<?php echo get_theme_mod("core_url"); ?>" id="suscribe-form"
+                      data-language="<?php echo $lang; ?>">
+                    <div class="form-control"><label for="">Nombre: </label>
+                        <input type="text" name="first_name" required>
+                    </div>
+                    <div class="form-control"><label for="">Apellido: </label>
+                        <input type="text" name="last_name" required>
+                    </div>
+
+                    <div class="form-control"><label for="">Correo electrónico: </label>
+                        <input type="email" name="email" required>
+                    </div>
+                    <div class="form-control">
+                        <label for="">¿Tu peque ya nació?</label>
+                        <select name="has_child" id="" required>
+                            <option value="no" selected>No</option>
+                            <option value="yes">Si</option>
+                        </select>
+                    </div>
+                    <div class="child-details">
+                        <div class="form-control"><label for="">Nombre o sobrenombre de tu bebé: </label>
+                            <input type="text" name="child_name">
+                        </div>
+                        <div class="form-control"><label for="">Fecha de nacimiento: </label>
+                            <input type="text" class="datepicker-input" name="birthday">
+                        </div>
+                    </div>
+                    <input type="submit" value="Suscribirme">
+                </form>
+                <div class="form-alert">
+                    <p>Se te estará redirigiendo al chat para que empieces a recibir actividades personalizadas. Gracias por suscribirte!</p>
+                    <p>Si no te abre el chat automáticamente presiona <a class="redirect_link" href="#">aquí</a>.</p>
+                </div>
+                <div class="form-error">
+                    <p>¡Oh no! Ha ocurrido un error.</p>
+                    <p>Sentimos las molestias, verifica tu conexión a internet e inténtalo nuevamente en unos minutos.</p>
+                </div>
+            </div>
+        </div>
+
+	<?php  } elseif($lang == 'uk') { ?>
+        <div class="container small-container">
+            <div class="single-box form-box">
+                <h2>Suscríbete para recibir actividades para tu bebé.</h2>
+                <p>Si ya estas recibiendo nuestras actividades en Facebook Messenger puedes omitir este paso. ¡Sigue disfrutando tus actividades!</p>
+                <form action="." method="post" data-default-uri="<?php echo get_theme_mod("core_url"); ?>" id="suscribe-form"
+                      data-language="<?php echo $lang; ?>">
+                    <div class="form-control"><label for="">Nombre: </label>
+                        <input type="text" name="first_name" required>
+                    </div>
+                    <div class="form-control"><label for="">Apellido: </label>
+                        <input type="text" name="last_name" required>
+                    </div>
+
+                    <div class="form-control"><label for="">Correo electrónico: </label>
+                        <input type="email" name="email" required>
+                    </div>
+                    <div class="form-control">
+                        <label for="">¿Tu peque ya nació?</label>
+                        <select name="has_child" id="" required>
+                            <option value="no" selected>No</option>
+                            <option value="yes">Si</option>
+                        </select>
+                    </div>
+                    <div class="child-details">
+                        <div class="form-control"><label for="">Nombre o sobrenombre de tu bebé: </label>
+                            <input type="text" name="child_name">
+                        </div>
+                        <div class="form-control"><label for="">Fecha de nacimiento: </label>
+                            <input type="text" class="datepicker-input" name="birthday">
+                        </div>
+                    </div>
+                    <input type="submit" value="Suscribirme">
+                </form>
+                <div class="form-alert">
+                    <p>Se te estará redirigiendo al chat para que empieces a recibir actividades personalizadas. Gracias por suscribirte!</p>
+                    <p>Si no te abre el chat automáticamente presiona <a class="redirect_link" href="#">aquí</a>.</p>
+                </div>
+                <div class="form-error">
+                    <p>¡Oh no! Ha ocurrido un error.</p>
+                    <p>Sentimos las molestias, verifica tu conexión a internet e inténtalo nuevamente en unos minutos.</p>
+                </div>
+            </div>
+        </div>
+
+	<?php  } elseif($lang == 'uz') { ?>
+        <div class="container small-container">
+            <div class="single-box form-box">
+                <h2>Suscríbete para recibir actividades para tu bebé.</h2>
+                <p>Si ya estas recibiendo nuestras actividades en Facebook Messenger puedes omitir este paso. ¡Sigue disfrutando tus actividades!</p>
+                <form action="." method="post" data-default-uri="<?php echo get_theme_mod("core_url"); ?>" id="suscribe-form"
+                      data-language="<?php echo $lang; ?>">
+                    <div class="form-control"><label for="">Nombre: </label>
+                        <input type="text" name="first_name" required>
+                    </div>
+                    <div class="form-control"><label for="">Apellido: </label>
+                        <input type="text" name="last_name" required>
+                    </div>
+
+                    <div class="form-control"><label for="">Correo electrónico: </label>
+                        <input type="email" name="email" required>
+                    </div>
+                    <div class="form-control">
+                        <label for="">¿Tu peque ya nació?</label>
+                        <select name="has_child" id="" required>
+                            <option value="no" selected>No</option>
+                            <option value="yes">Si</option>
+                        </select>
+                    </div>
+                    <div class="child-details">
+                        <div class="form-control"><label for="">Nombre o sobrenombre de tu bebé: </label>
+                            <input type="text" name="child_name">
+                        </div>
+                        <div class="form-control"><label for="">Fecha de nacimiento: </label>
+                            <input type="text" class="datepicker-input" name="birthday">
+                        </div>
+                    </div>
+                    <input type="submit" value="Suscribirme">
+                </form>
+                <div class="form-alert">
+                    <p>Se te estará redirigiendo al chat para que empieces a recibir actividades personalizadas. Gracias por suscribirte!</p>
+                    <p>Si no te abre el chat automáticamente presiona <a class="redirect_link" href="#">aquí</a>.</p>
+                </div>
+                <div class="form-error">
+                    <p>¡Oh no! Ha ocurrido un error.</p>
+                    <p>Sentimos las molestias, verifica tu conexión a internet e inténtalo nuevamente en unos minutos.</p>
+                </div>
+            </div>
+        </div>
+
+	<?php } else { ?>
+        <div class="container small-container">
+            <div class="single-box form-box">
+                <h2>Suscríbete para recibir actividades para tu bebé.</h2>
+                <p>Si ya estas recibiendo nuestras actividades en Facebook Messenger puedes omitir este paso. ¡Sigue disfrutando tus actividades!</p>
+                <form action="." method="post" data-default-uri="<?php echo get_theme_mod("core_url"); ?>" id="suscribe-form"
+                      data-language="<?php echo $lang; ?>">
+                    <div class="form-control"><label for="">Nombre: </label>
+                        <input type="text" name="first_name" required>
+                    </div>
+                    <div class="form-control"><label for="">Apellido: </label>
+                        <input type="text" name="last_name" required>
+                    </div>
+
+                    <div class="form-control"><label for="">Correo electrónico: </label>
+                        <input type="email" name="email" required>
+                    </div>
+                    <div class="form-control">
+                        <label for="">¿Tu peque ya nació?</label>
+                        <select name="has_child" id="" required>
+                            <option value="no" selected>No</option>
+                            <option value="yes">Si</option>
+                        </select>
+                    </div>
+                    <div class="child-details">
+                        <div class="form-control"><label for="">Nombre o sobrenombre de tu bebé: </label>
+                            <input type="text" name="child_name">
+                        </div>
+                        <div class="form-control"><label for="">Fecha de nacimiento: </label>
+                            <input type="text" class="datepicker-input" name="birthday">
+                        </div>
+                    </div>
+                    <input type="submit" value="Suscribirme">
+                </form>
+                <div class="form-alert">
+                    <p>Se te estará redirigiendo al chat para que empieces a recibir actividades personalizadas. Gracias por suscribirte!</p>
+                    <p>Si no te abre el chat automáticamente presiona <a class="redirect_link" href="#">aquí</a>.</p>
+                </div>
+                <div class="form-error">
+                    <p>¡Oh no! Ha ocurrido un error.</p>
+                    <p>Sentimos las molestias, verifica tu conexión a internet e inténtalo nuevamente en unos minutos.</p>
+                </div>
+            </div>
+        </div>
+	<?php } ?>
 <?php } ?>
 <?php get_footer(); ?>
