@@ -3,7 +3,7 @@
 get_header();
 
 $license = null; //premium, patrocinado, trial_premium, free
-$license = $_GET['licence'];
+$license = $_GET['license'];
 $lang = substr(explode(',',$_SERVER['HTTP_ACCEPT_LANGUAGE'])[0], 0, 2);
 ?>
 	<section class="single-content">
