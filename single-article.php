@@ -2,8 +2,8 @@
 
 get_header();
 
-$licence = null; //premium, patrocinado, trial_premium, free
-$licence = $_GET['licence'];
+$license = null; //premium, patrocinado, trial_premium, free
+$license = $_GET['licence'];
 $lang = substr(explode(',',$_SERVER['HTTP_ACCEPT_LANGUAGE'])[0], 0, 2);
 ?>
 	<section class="single-content">
@@ -13,7 +13,7 @@ $lang = substr(explode(',',$_SERVER['HTTP_ACCEPT_LANGUAGE'])[0], 0, 2);
 		<div class="container">
 			<div class="single-box">
 				<?php
-				if($licence == 'premium' || $licence == 'patrocinado' || $licence == 'trial_premium' || is_user_logged_in()) {
+				if($license == 'premium' || $license == 'patrocinado' || $license == 'trial_premium' || is_user_logged_in()) {
 					if(have_posts()) {
 						while (have_posts()) {
 							the_post();
@@ -29,7 +29,7 @@ $lang = substr(explode(',',$_SERVER['HTTP_ACCEPT_LANGUAGE'])[0], 0, 2);
 			</div>
 		</div>
         <?php if(!is_user_logged_in()) { ?>
-	        <?php if($licence != 'premium' && $licence != 'patrocinado' && $licence != 'trial_premium' ) { ?>
+	        <?php if($license != 'premium' && $license != 'patrocinado' && $license != 'trial_premium' ) { ?>
 		        <div class="locked">
 			        <div class="container">
 				        <?php if($lang == 'en' || $lang == 'ar') {
