@@ -13,23 +13,23 @@ $lang = substr(explode(',',$_SERVER['HTTP_ACCEPT_LANGUAGE'])[0], 0, 2);
 		<div class="container">
 			<div class="single-box">
 				<?php
-				if($license == 'premium' || $license == 'patrocinado' || $license == 'trial_premium' || is_user_logged_in()) {
+				#if($license == 'premium' || $license == 'patrocinado' || $license == 'trial_premium' || is_user_logged_in()) {
 					if(have_posts()) {
 						while (have_posts()) {
 							the_post();
 							the_content();
 						} }
-				} else {
-					if(have_posts()) {
-						while (have_posts()) {
-							the_post();
-							the_excerpt();
-						} }
-				} ?>
+				#} else {
+				#	if(have_posts()) {
+				#		while (have_posts()) {
+				#			the_post();
+				#			the_excerpt();
+				#		} }
+				#} ?>
 			</div>
 		</div>
         <?php if(!is_user_logged_in()) { ?>
-	        <?php if($license != 'premium' && $license != 'patrocinado' && $license != 'trial_premium' ) { ?>
+	        <?php # if($license != 'premium' && $license != 'patrocinado' && $license != 'trial_premium' ) { ?>
 		        <div class="locked">
 			        <div class="container">
 				        <?php if($lang == 'en' || $lang == 'ar') {
@@ -46,7 +46,7 @@ $lang = substr(explode(',',$_SERVER['HTTP_ACCEPT_LANGUAGE'])[0], 0, 2);
 				        ?>
 			        </div>
 		        </div>
-	        <?php }?>
+	        <?php # }?>
         <?php } ?>
 		<!--
 		<div class="container">
