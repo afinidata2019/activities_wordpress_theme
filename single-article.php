@@ -28,27 +28,26 @@ $lang = substr(explode(',',$_SERVER['HTTP_ACCEPT_LANGUAGE'])[0], 0, 2);
 				#} ?>
 			</div>
 		</div>
-		<!-- 
-        <?php# if(!is_user_logged_in()) { ?>
+        <?php if(!is_user_logged_in()) { ?>
 	        <?php # if($license != 'premium' && $license != 'patrocinado' && $license != 'trial_premium' ) { ?>
 		        <div class="locked">
 			        <div class="container">
 				        <?php if($lang == 'en' || $lang == 'ar') {
-					        #echo '<strong>¡Continue reading!</strong><span>Switch to <b>Afini Premium</b> today.</span>';
+					        echo '<strong>¡Continue reading!</strong><span>Switch to <b>Afini Premium</b> today.</span>';
 				        } else {
-					        #echo '<strong>¡Continua leyendo!</strong><span>Cámbiate a <b>Afini Premium</b> hoy.</span>';
+					        echo '<strong>¡Continua leyendo!</strong><span>Cámbiate a <b>Afini Premium</b> hoy.</span>';
 				        }
 				        ?>
 				        <?php if($lang == 'en') {
-					        #echo '<a href="https://afini.org/reservarkits/membresiaafinimensual-blts6">Click Here</a>';
+					        echo '<a href="https://afini.org/reservarkits/membresiaafinimensual-blts6">Click Here</a>';
 				        } else {
-					        #echo '<a href="https://afini.org/reservarkits/membresiaafinimensual-blts6">Click Aquí</a>';
+					        echo '<a href="https://afini.org/reservarkits/membresiaafinimensual-blts6">Click Aquí</a>';
 				        }
 				        ?>
 			        </div>
 		        </div>
 	        <?php # }?>
-        <?php } ?> -->
+        <?php } ?>
 		<!--
 		<div class="container">
 			<div class="share-buttons">
